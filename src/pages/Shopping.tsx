@@ -31,10 +31,10 @@ const Shopping = () => {
     return (
         <>
         <Navbar/>
-        <div className="px-20 py-10 bg-gray-100">
-        <h1 className="text-4xl font-bold mb-8">Shopping</h1>
+        <div className="px-4 py-10 sm:px-10 lg:px-20 bg-gray-100">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center sm:text-left">Shopping</h1>
 
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-10">
             <div className="flex flex-col space-y-4">
                 <input type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)} className="bg-white px-5 py-2 shadow-md rounded-lg"/>
                 <select value={category} onChange={(e) => setCategory(e.target.value)} className="bg-white px-4 py-2 shadow-md rounded-lg">
@@ -45,9 +45,9 @@ const Shopping = () => {
                 </select>
             </div>
 
-            <div className="col-span-3 grid grid-cols-3 gap-10">
+            <div className="col-span-1 md:col-span-3 sm:grid-cols-3 lg:grid grid-cols-3 gap-6 md:gap-10">
                 {filterProducts.map((product) => (
-                <div key={product.id} className="h-128 flex flex-col justify-between bg-white text-gray-900 shadow-lg rounded-2xl p-8 hover:bg-gray-900 hover:text-white transition duration-300">
+                <div key={product.id} className="flex flex-col justify-between bg-white text-gray-900 shadow-lg rounded-2xl p-6 sm:p-8 hover:bg-gray-900 hover:text-white transition duration-300">
                     <img src={product.image} className="w-full h-40 mb-8 object-contain"/>
                     <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
                     <h3 className="mb-4 line-clamp-3 w-full overflow-hidden">{product.description}</h3>
