@@ -45,7 +45,7 @@ const Shopping = () => {
                 </select>
             </div>
 
-            <div className="col-span-1 md:col-span-3 sm:grid-cols-3 lg:grid grid-cols-3 gap-6 md:gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 col-span-1 md:col-span-3 gap-6 md:gap-10">
                 {filterProducts.map((product) => (
                 <div key={product.id} className="flex flex-col justify-between bg-white text-gray-900 shadow-lg rounded-2xl p-6 sm:p-8 hover:bg-gray-900 hover:text-white transition duration-300">
                     <img src={product.image} className="w-full h-40 mb-8 object-contain"/>
